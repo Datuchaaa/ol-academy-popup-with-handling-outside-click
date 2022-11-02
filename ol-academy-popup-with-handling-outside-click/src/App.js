@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={()=>setShowPopup(true)} >Open Popup</button>
+      <button className="open-btn" onClick={()=>setShowPopup(true)} ><h1>OPEN POPUP</h1></button>
       {showPopup && <Popup onClose={handelClosePopup} />}
     </div>
   );
