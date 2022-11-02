@@ -16,6 +16,9 @@ const Popup = ({ onClose }) => {
       }
     };
     document.addEventListener("click", handleClick);
+    return function clear() {
+      document.removeEventListener("click", handleClick);
+    };
   });
 
   return (
@@ -23,7 +26,9 @@ const Popup = ({ onClose }) => {
       <div className="popup-inner" ref={popupRef}>
         <h1>Popup is opend</h1>
         <p>Hello Popup</p>
-        <button className="close-btn" onClick={onClose}>Cose</button>
+        <button className="close-btn" onClick={onClose}>
+          Cose
+        </button>
       </div>
     </div>
   );
