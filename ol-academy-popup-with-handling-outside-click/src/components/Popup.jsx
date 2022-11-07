@@ -24,7 +24,7 @@ const Popup = ({ onClose }) => {
   return (
     <div className="popup">
       <div className="popup-inner" ref={popupRef}>
-        <h1>Popup is opend</h1>
+        <h1>Popup is Opened</h1>
         <p>Hello Popup</p>
         <button className="close-btn" onClick={onClose}>
           Cose
