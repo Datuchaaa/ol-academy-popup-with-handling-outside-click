@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Popup.css";
-// import { Button } from "bootstrap";
 
 const Popup = ({ onClose }) => {
   const popupRef = useRef(null);
@@ -10,7 +8,6 @@ const Popup = ({ onClose }) => {
     const handleClick = (e) => {
       if (popupRef.current !== null) {
         if (!popupRef.current?.contains(e.target)) {
-          console.log("outside");
           onClose();
         }
       }
